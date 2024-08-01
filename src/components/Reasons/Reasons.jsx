@@ -1,12 +1,12 @@
 import React from 'react'
 import './Reasons.css'
-import image1 from "../../assets/image1.png"
-import image2 from "../../assets/image2.png"
-import image3 from "../../assets/image3.png";
-import image4 from "../../assets/image4.png";
-import nb from '../../assets/nb.png';
-import adidas from '../../assets/adidas.png'
-import nike from '../../assets/nike.png'
+import image1 from "../../assets/image11.png"
+import image2 from "../../assets/image22.png"
+import image3 from "../../assets/image33.jpg";
+import image4 from "../../assets/image44.png";
+// import nb from '../../assets/nb.png';
+// import adidas from '../../assets/adidas.png'
+// import nike from '../../assets/nike.png'
 import tick from "../../assets/tick.png";
 
 export const Reasons = () => {
@@ -27,22 +27,34 @@ export const Reasons = () => {
             <div className='details-r'>
                 <div>
                     <img src={tick} alt=""></img>
-                    <span>OVER 140+ EXPERT COACHS</span>
+                    <span>100+ TOTAL MEMBERS</span>
                 </div>
                 <div>
                     <img src={tick} alt="" />
-                    <span>TRAIN SMARTER AND FASTER THAN BEFORE</span>
+                    <span>5+ AWARDS</span>
                 </div>
                 <div>
                     <img src={tick} alt="" />
-                    <span>1 FREE PROGRAM FOR NEW MEMBER</span>
+                    <span>25+ PROGRAM </span>
                 </div>
                 <div>
                     <img src={tick} alt="" />
-                    <span>RELIABLE PARTNERS</span>
+                    <span>12+ YEARS WORK EXPERIENCE</span>
+                </div>
+                <div>
+                    <img src={tick} alt="" />
+                    <span>12+ YEARS WORK EXPERIENCE</span>
+                </div>
+                <div>
+                    <img src={tick} alt="" />
+                    <span>12+ YEARS WORK EXPERIENCE</span>
+                </div>
+                <div>
+                    <img src={tick} alt="" />
+                    <span>12+ YEARS WORK EXPERIENCE</span>
                 </div>
             </div>
-            <span
+            {/* <span
                 style={{
                     color: "var(--gray)",
                     fontWeight: "normal"
@@ -54,7 +66,7 @@ export const Reasons = () => {
                 <img src={nb} alt=''/>
                 <img src={adidas} alt=''/>
                 <img src={nike} alt=''/>
-            </div>
+            </div> */}
         </div>
     </div>
   )

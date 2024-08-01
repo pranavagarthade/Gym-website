@@ -1,12 +1,13 @@
 import React from 'react'
 import './Hero.css'
 import Header from '../Header/Header'
-import hero_image from "../../assets/hero_image.png";
+// import hero_image from "../../assets/hero_image.png";
 import hero_image_back from "../../assets/hero_image_back.png";
 import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
-import {motion} from 'framer-motion'
-import NumberCounter from 'number-counter'
+import {motion} from 'framer-motion';
+import NumberCounter from 'number-counter';
+import hero_image from "../../assets/shiva-removebg.png"
 const Hero = () => {
   const transition = {type: 'string', duration:3};
   const mobile = window.innerWidth<=768 ? true : false;

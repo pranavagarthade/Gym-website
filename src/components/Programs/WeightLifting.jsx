@@ -1,13 +1,59 @@
 import React from 'react';
+import '../Programs/WeightLifting.css';  
+import wei1 from '../../assets/wei1.jpg';
+import wei2 from '../../assets/wei2.jpg';
+import wei3 from '../../assets/wei3.jpg';
+import wei from '../../assets/wei.jpg';
 
-const WeightLifting = () => {
+const Services = () => {
     return (
-    <div>
-      <h1>Welcome to my React page!</h1>
-      <p>This is a simple React page.</p>
-    </div>
-  );
-}
+        <div>
+            <section className="services-banner">
+                <h2>Main Classes</h2>
+                <p>Fit and Fabulous Total Body Transformation</p>
+            </section>
 
+            <div className="services-container">
+                <div className="service-item">
+                    <img src={wei1} alt="Squats" />
+                    <h3>Squats</h3>
+                    <p>Squats sculpt legs, strengthen core, enhance overall fitness.</p>
+                </div>
+                <div className="service-item">
+                    <img src={wei2} alt="Overhead Press" />
+                    <h3>Overhead Press</h3>
+                    <p>Overhead press: Builds shoulder strength, tones arms, boosts posture.</p>
+                </div>
+                <div className="service-item">
+                    <img src={wei3} alt="Lunges" />
+                    <h3>Lunges</h3>
+                    <p>Lunges shape legs, improve balance, enhance lower body strength.</p>
+                </div>
+            </div>
 
-export default WeightLifting
+            <section className="benefits">
+                <h2>Our Benefits</h2>
+                <div className="benefits-content">
+                    <div className="benefits-text">
+                        <p>
+                            At Geetanjali Weightlifting Academy, we offer a diverse range of weightlifting programs, all of which can be conveniently accessed online. Whether you're looking to build strength in your upper body, tone your lower body, focus on cardiovascular fitness, enhance your flexibility, or strengthen your core, our comprehensive weightlifting routines are accessible from the comfort of your own home.
+                        </p>
+                        <div className="exercise-types">
+                            <ul>
+                                <li>Squats</li>
+                                <li>Overhead Press</li>
+                                <li>Lunges</li>
+                                <li>Leg Press</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="benefits-img">
+                        <img src={wei} alt="Benefits" />
+                    </div>
+                </div>
+            </section>
+        </div>
+    );
+};
+
+export default Services;

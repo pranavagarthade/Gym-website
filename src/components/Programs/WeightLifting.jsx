@@ -5,7 +5,7 @@ import wei2 from '../../assets/wei2.jpg';
 import wei3 from '../../assets/wei3.jpg';
 import wei from '../../assets/wei.jpg';
 
-const Services = () => {
+const WeightLifting = () => {
     return (
         <div>
             <section className="services-banner">
@@ -56,4 +56,4 @@ const Services = () => {
     );
 };
 
-export default Services;
+export default WeightLifting;

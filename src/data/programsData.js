@@ -138,8 +138,8 @@ export const programsData = [
   // //   details:
   // //     "This programs is designed for those who exercises only for their body fitness not body building.",
   // // },
-      path:"/HealthFitnes",
-  },
+  //     path:"/HealthFitnes",
+  // },
 ];
 
 

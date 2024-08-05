@@ -101,6 +101,7 @@ export const programsData = [
     heading: "Health Fitness",
     details:
       "This programs is designed for those who exercises only for their body fitness not body building.",
+      path:"/HealthFitnes"
   },
   // {
   //   image: <svg width="20" height="16" viewBox="0 0 20 16"  xmlns="http://www.w3.org/2000/svg">

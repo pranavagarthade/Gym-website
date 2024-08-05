@@ -9,8 +9,8 @@ const WeightLifting = () => {
     return (
         <div>
             <section className="services-banner">
-                <h2>Main Classes</h2>
-                <p>Fit and Fabulous Total Body Transformation</p>
+                <h2>Discover Our Programs</h2>
+                <p>"Our Offered Programs"</p>
             </section>
 
             <div className="services-container">
@@ -36,8 +36,7 @@ const WeightLifting = () => {
                 <div className="benefits-content">
                     <div className="benefits-text">
                         <p>
-                            At Geetanjali Weightlifting Academy, we offer a diverse range of weightlifting programs, all of which can be conveniently accessed online. Whether you're looking to build strength in your upper body, tone your lower body, focus on cardiovascular fitness, enhance your flexibility, or strengthen your core, our comprehensive weightlifting routines are accessible from the comfort of your own home.
-                        </p>
+                        At Geetanjali Weightlifting Academy, we offer a diverse range of weightlifting programs, all of which can be conveniently accessed online. Whether you're looking to build strength in your upper body, tone your lower body, focus on cardiovascular fitness, enhance your flexibility, or strengthen your core, our comprehensive weightlifting routines are accessible from the comfort of your own home. Our commitment to providing online weightlifting solutions has received overwhelmingly positive feedback from our clients. This approach not only makes weightlifting more accessible but also allows us to efficiently deliver results, ensuring that your weightlifting journey is not only effective but also time-efficient.</p>
                         <div className="exercise-types">
                             <ul>
                                 <li>Squats</li>

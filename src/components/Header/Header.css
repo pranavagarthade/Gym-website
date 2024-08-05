@@ -1,11 +1,16 @@
 .header {
     display: flex;
     justify-content: space-between;
+
+    
 }
 
 .logo{
-    width: 10rem;
-    height: 3rem;
+    width: 100px;
+    height: 100px;
+    /* padding-left: 20px; */
+    padding-bottom: 20px;
+   
 }
 
 .header-menu{
@@ -18,6 +23,11 @@
 .header-menu>li:hover{
     color: var(--orange);
     cursor: pointer;
+}
+
+.aboutus{
+    text-decoration: none; /* remove underline */
+    color: inherit; /* inherit text color from parent */
 }
 
 @media screen and (max-width: 768px) 

@@ -19,7 +19,7 @@
 }
 
 .the-best-ad{
-    margin-top: 4rem;
+    margin-top: .1rem;
     background-color: #363d42;
     border-radius: 4rem;
     width: fit-content;
@@ -188,6 +188,12 @@
     height: 30rem;
     left: 0;
 }
+
+.join-now{
+    text-decoration: none; /* remove underline */
+    color: inherit; /* inherit text color from parent */
+}
+
 
 @media screen and (max-width: 768px) 
 {

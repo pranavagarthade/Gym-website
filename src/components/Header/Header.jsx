@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './Header.css';
-import Logo from '../../assets/logo.png';
+// import Logo from '../../assets/logo.png';
 import Bars from '../../assets/bars.png';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
+import fit_logo from '../../assets/fit_logo.png';
 
 const Header = () => {
   const [mobile, setMobile] = useState(window.innerWidth <= 768);
@@ -21,7 +23,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <img src={Logo} alt="" className='logo' />
+      <img src={fit_logo} alt="" className='logo' />
       {menuOpened === false && mobile === true ? (
         <div
           style={{
@@ -36,51 +38,50 @@ const Header = () => {
       ) : (
         <ul className='header-menu'>
           <li>
-            <Link
+            <ScrollLink
               onClick={() => setMenuOpened(false)}
               activeClass='active'
               to='home'
               spy={true}
               smooth={true}
-            >Home</Link>
+            >Home</ScrollLink>
           </li>
           <li>
-            <Link
+            <ScrollLink
               onClick={() => setMenuOpened(false)}
               to='programs'
               spy={true}
               smooth={true}
             >
               Programs
-            </Link>
+            </ScrollLink>
           </li>
           <li>
-            <Link
+            <RouterLink 
+            className='aboutus'
+              onClick={() => setMenuOpened(false)}
+              to='/Aboutus'
+            >
+              About us
+            </RouterLink>
+          </li>
+          <li>
+            <ScrollLink
               onClick={() => setMenuOpened(false)}
               to='reasons'
               spy={true}
               smooth={true}
             >
               Why us
-            </Link>
+            </ScrollLink>
           </li>
-          {/* <li>
-            <Link
-              onClick={() => setMenuOpened(false)}
-              to='plans'
-              spy={true}
-              smooth={true}
-            >
-              Plans
-            </Link>
-          </li> */}
           <li>
-            <Link
+            <ScrollLink
               onClick={() => setMenuOpened(false)}
               to='testimonials'
               spy={true}
               smooth={true}
-            >Testimonials</Link>
+            >Testimonials</ScrollLink>
           </li>
         </ul>
       )}

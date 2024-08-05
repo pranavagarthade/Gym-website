@@ -1,0 +1,227 @@
+.about-us-container {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+  
+  .about-us-banner {
+    width: 100%;
+    padding: 100px 20px;
+    background: url('https://dm0qx8t0i9gc9.cloudfront.net/thumbnails/video/Vd3bj2jPe/asian-woman-stretching-legs-outdoor-fitness-woman-doing-stretching-exercise-for-legs-before-fitness-workout-closeup-of-asian-runner-stretching-legs-before-running-in-park_b6xw20xyl_thumbnail-1080_01.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .about-us-banner h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+  }
+  
+  .coach-info {
+    font-size: 1rem;
+    color: #1b1818;
+    margin-top: 10px;
+  }
+  
+  .about-us-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-us-images {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+    width: 100%;
+  }
+  
+  .about-us-images img {
+    width: 48%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .about-us-content p {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .yoga-enhance-section {
+    background-color: #f0f8ff; /* Light blue background */
+    padding: 80px 20px;
+    margin-top: 60px;
+  }
+  
+  .yoga-enhance-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .yoga-enhance-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .yoga-enhance-info .line {
+    width: 50px;
+    height: 3px;
+    background-color: #80e0d0;
+    margin: 0 auto 30px;
+  }
+  
+  .yoga-enhance-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 40px;
+  }
+  
+  .yoga-enhance-bars {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .bar {
+    width: 48%;
+    margin-bottom: 30px;
+  }
+  
+  .bar-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .bar-container {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .bar-fill {
+    background-color: #80e0d0;
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  
+  .bar-percentage {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-align: right;
+    color: #555;
+  }
+
+  /* Add this to your existing CSS */
+
+.video-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+  }
+  
+  .video-container {
+    flex: 1;
+    margin-right: 40px;
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .video-info {
+    flex: 1;
+  }
+  
+  .video-info h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .video-info p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .video-info ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  
+  .video-info ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .video-info ul li::before {
+    content: "•";
+    color: #80e0d0;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -5px;
+  }
+  
+  @media (max-width: 768px) {
+    .video-section {
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+  
+    .video-container {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .yoga-enhance-bars {
+      flex-direction: column;
+    }
+  
+    .bar {
+      width: 100%;
+    }
+  
+    .about-us-images {
+      flex-direction: column;
+    }
+  
+    .about-us-images img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }

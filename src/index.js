@@ -12,7 +12,8 @@ import Trataka from './components/Programs/Trataka';
 import Pranayam from './components/Programs/Pranayam';
 import Laghu from './components/Programs/Laghu';
 import HealthFitnes from './components/Programs/HealthFitnes';
-
+import  Form  from './components/Form/Form';
+import AboutUs from './components/Aboutus/About';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -30,6 +31,8 @@ root.render(
       <Route path="/Pranayam" element={<Pranayam/>} />
       <Route path="/Laghu" element={<Laghu/>} />
       <Route path="/HealthFitnes" element={<HealthFitnes/>} />
+      <Route path="/Form" element={<Form/>}/>
+      <Route path="/Aboutus" element={<AboutUs/>}/>
 
       
       {/* Add routes for all existing pages */}

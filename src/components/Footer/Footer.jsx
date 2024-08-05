@@ -3,7 +3,9 @@ import './Footer.css';
 import Youtube from '../../assets/youtube.png';
 import Instagram from '../../assets/instagram.png';
 import LinkedIn from '../../assets/linkedin.png';
-import Logo from '../../assets/logo.png';
+// import Logo from '../../assets/logo.png';
+import fit_logo from '../../assets/fit_logo.png';
+
 
 const Footer = () => {
   return (
@@ -16,7 +18,7 @@ const Footer = () => {
           <img src={LinkedIn} alt='LinkedIn'/>
         </div>
         <div className='logo-f'>
-          <img src={Logo} alt='Logo' />
+          <img src={fit_logo} alt='Logo' />
         </div>
       </div>
       <div className='blur blur-f-1'></div>

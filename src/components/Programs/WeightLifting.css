@@ -1,10 +1,10 @@
 /* General styles */
-body, html {
+/* body, html {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
     overflow-x: hidden;
-}
+} */
 
 .container {
     width: 90%;
@@ -78,7 +78,7 @@ body, html {
 
 /* Benefits section */
 .benefits {
-    padding: 100px 0;
+    padding: 10px 10px;
     background-color: #f5f5f5;
     position: relative;
 }
@@ -168,7 +168,7 @@ body, html {
     }
     
     .benefits-text {
-        padding-right: 0;
+        padding-right:0;
         margin-bottom: 30px;
     }
 }

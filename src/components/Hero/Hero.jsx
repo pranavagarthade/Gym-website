@@ -7,7 +7,8 @@ import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
 import {motion} from 'framer-motion';
 import NumberCounter from 'number-counter';
-import hero_image from "../../assets/shiva-removebg.png"
+import hero_image from "../../assets/shiva-removebg.png";
+import { Link } from 'react-router-dom';
 const Hero = () => {
   const transition = {type: 'string', duration:3};
   const mobile = window.innerWidth<=768 ? true : false;
@@ -61,12 +62,12 @@ const Hero = () => {
             </div>
             {/* Hero Button */}
             <div className="hero-buttons">
-              <button className="btn">Get Started</button>
+              <button className="btn"><Link className='join-now' to='/Form'>Get Started</Link></button>
               <button className="btn">Learn More</button>
             </div>
         </div>
         <div className="right-h">
-          <button className='btn'>Join Now</button>
+          <button className='btn'><Link className='join-now' to='/Form'>Join Now</Link></button>
           <motion.div 
           initial={{right:"-1rem"}}
           whileInView={{right: "4rem"}}

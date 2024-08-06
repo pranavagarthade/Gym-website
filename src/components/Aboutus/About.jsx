@@ -1,13 +1,18 @@
 import React from 'react';
 import './about.css';
-import image3 from "../../assets/image33.jpg";
+// import image3 from "../../assets/image33.jpg";
+// import yogaimg from "../../assets/yogaimg.jpg";
+import cerificate1 from "../../assets/cerificate1.png"
+import cer2 from "../../assets/cer2.png";
+import abt11 from "../../assets/abt11.png";
+
 
 function AboutUs() {
   return (
     <div className="about-us-container" id='aboutus'>
       <div
         className="about-us-banner"
-        style={{ backgroundImage: `url(${image3})` }}
+        style={{ backgroundImage: `url(${abt11})` }}
       >
         <h1>About Us</h1>
         <p className="coach-info">Know more about your coach</p>
@@ -17,8 +22,8 @@ function AboutUs() {
           Welcome to Geetanjali's Yoga and Fitness Zone, where we have been dedicated to promoting health and well-being for over a decade. Our classes are conducted online, making it convenient for you to join from the comfort of your home. We offer a comprehensive range of services, including free diet plans, meditation sessions, and much more. Join us to embark on a journey towards a healthier and more balanced life.
         </p>
         <div className="about-us-images">
-          <img src="image1.jpg" alt="K11 certificate" />
-          <img src="image2.jpg" alt="Nutrients" />
+          <img src={cerificate1} alt="Vyas certificate" />
+          <img src={cer2} alt="Nutrients" />
         </div>
         <p>
           At Geetanjali's Yoga and Fitness Zone, we believe in a holistic approach to fitness. Our experienced instructors guide you through each session with personalized attention, ensuring that you achieve your health goals effectively. Join our community today and experience the transformation.
@@ -64,7 +69,6 @@ function AboutUs() {
           </div>
         </div>
       </div>
-
 
 
       <div className="video-section">

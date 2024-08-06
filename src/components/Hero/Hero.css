@@ -39,7 +39,7 @@
 
 .the-best-ad>div{
     position: absolute;
-    background-color: var(--orange);
+    background-color: rgba(141, 236, 249, 0.69);
     width: 5.4rem;
     height: 80%;
     left: 8px;

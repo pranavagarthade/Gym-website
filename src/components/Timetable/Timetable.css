@@ -1,0 +1,100 @@
+.timetable {
+    background-color: #1e1e1e25;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .title span {
+    color: var(--orange);
+  }
+  
+  .day-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    margin-top: 50px;
+  }
+  
+  .day-nav button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    transition: color 0.3s, border-bottom 0.3s;
+  }
+  
+  .day-nav button.active {
+    color: var(--orange);
+    border-bottom: 2px solid var(--orange);
+  }
+  
+  .schedule-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .schedule-grid.fade-out {
+    opacity: 0;
+  }
+  
+  .schedule-grid.fade-in {
+    opacity: 1;
+  }
+  
+  .schedule-item {
+    background-color: #2c2c2c;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .schedule-item:hover {
+    background-color: var(--orange);
+  }
+  
+  .schedule-item:hover .time,
+  .schedule-item:hover .activity,
+  .schedule-item:hover .instructor {
+    color: #1e1e1e;
+  }
+  
+  .time {
+    font-size: 14px;
+    color: var(--orange);
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .activity {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .instructor {
+    font-size: 14px;
+    color: #aaa;
+    transition: color 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .schedule-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .day-nav {
+      flex-wrap: wrap;
+    }
+  }

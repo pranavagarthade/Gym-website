@@ -77,7 +77,7 @@ export const programsData = [
   {
     image: jala
     ,
-    heading: "Jala niti",
+    heading: "Jala Niti",
     details:
       "Jala Neti is an ancient yogic practice used to cleanse the nasal passages. It involves using a neti pot filled with a saline solution to flush out the nasal cavities",
       path:"/HealthFitnes"

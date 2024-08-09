@@ -96,8 +96,8 @@ function App() {
             >
               <option value="">Select a batch</option>
               <option value="Morning">Morning (6:00 am to 7:00 am)</option>
-              <option value="Morning">Morning (8:00 am to 9:00 am)</option>
-              <option value="Morning">Morning (10:30 am to 11:30 am)</option>
+              <option value="Morningg">Morning (8:00 am to 9:00 am)</option>
+              <option value="Morninggg">Morning (10:30 am to 11:30 am)</option>
               <option value="Evening">Evening (5:00 pm to 6:00 pm)</option>
             </select>
           </div>

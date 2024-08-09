@@ -75,7 +75,7 @@ const Footer = () => {
                 <RouterLink to="/Laghu">LAGHU SHANKHA PRAKSHALANA </RouterLink>
               </li>
               <li>
-                <RouterLink to="/HealthFitnes">HEALTH FITNESS</RouterLink>
+                <RouterLink to="/HealthFitnes">JALA NITI</RouterLink>
               </li>
             </ul>
           </div>

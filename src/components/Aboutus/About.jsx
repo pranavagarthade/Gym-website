@@ -1,7 +1,5 @@
 import React from 'react';
 import './about.css';
-// import image3 from "../../assets/image33.jpg";
-// import yogaimg from "../../assets/yogaimg.jpg";
 import cerificate1 from "../../assets/cerificate1.png"
 import cer2 from "../../assets/cer2.png";
 import abt11 from "../../assets/abt11.png";
@@ -42,7 +40,7 @@ function AboutUs() {
 
       <div className="card-container">
     <div className="card-left">
-      <img src={log} alt="Image" className="card-image" />
+      <img src={log} alt="banner" className="card-image" />
     </div>
     <div className="card-right">
       <p className="card-info">
@@ -125,3 +123,5 @@ function AboutUs() {
 }
 
 export default AboutUs;
+
+

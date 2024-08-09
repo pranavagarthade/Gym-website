@@ -79,13 +79,14 @@ button:hover {
 .results {
   margin-top: 20px;
   font-size: 18px;
-  color: #ffffff;
+  color: #ffffff; /* This will be overridden by inline styles */
 }
 
 .results strong {
   font-size: 1.2em;
-  color: #5af945;
+  color: inherit; /* Inherit the color from the parent element */
 }
+
 
 .bmi-table {
   flex: 1;

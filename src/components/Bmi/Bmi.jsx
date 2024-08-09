@@ -5,41 +5,43 @@ const BMICalculator = () => {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
   const [bmi, setBMI] = useState(null);
+  const [bmiStatus, setBMIStatus] = useState('');
 
   const calculateBMI = () => {
     if (height && weight) {
       const heightInMeters = height / 100;
       const bmiValue = weight / (heightInMeters * heightInMeters);
       setBMI(bmiValue.toFixed(1));
+
+      const status = getWeightStatus(bmiValue);
+      setBMIStatus(status);
     }
   };
 
   const getWeightStatus = (bmi) => {
-    if (bmi < 18.5) return ['Underweight', '😕'];
-    if (bmi >= 18.5 && bmi <= 24.9) return ['Healthy', '😊'];
-    if (bmi >= 25.0 && bmi <= 29.9) return ['Overweight', '😐'];
-    if (bmi >= 30.0) return ['Obese', '😟'];
-    return ['', ''];
+    if (bmi < 18.5) return ['Underweight', '😕', 'red'];
+    if (bmi >= 18.5 && bmi <= 24.9) return ['Healthy', '😊', 'green'];
+    if (bmi >= 25.0 && bmi <= 29.9) return ['Overweight', '😐', 'red'];
+    if (bmi >= 30.0) return ['Obese', '😟', 'red'];
+    return ['', '', ''];
   };
 
   return (
     <div className="bmi-calculator">
-
-            
       <div className="calculator-section">
-      <span className='bmit'>BMI Calculator</span>
-        <h1><span className='bmis'>CALCULATE</span> YOUR BMI</h1>
+        <span className="bmit">BMI Calculator</span>
+        <h1><span className="bmis">CALCULATE</span> YOUR BMI</h1>
         <p>Body Mass Index (BMI) is a simple calculation using a person's height and weight. The formula is BMI = kg/m<sup>2</sup> where kg is a person's weight in kilograms and m<sup>2</sup> is their height in metres squared.</p>
         
         <div className="calculator">
           <div className="input-group">
-            <input className='bg'
+            <input className="bg"
               type="number"
               placeholder="Height / cm"
               value={height}
               onChange={(e) => setHeight(e.target.value)}
             />
-            <input className='bg'
+            <input className="bg"
               type="number"
               placeholder="Weight / kg"
               value={weight}
@@ -47,11 +49,11 @@ const BMICalculator = () => {
             />
           </div>
           
-          <button className='bmic' onClick={calculateBMI}>CALCULATE</button>
+          <button className="bmic" onClick={calculateBMI}>CALCULATE</button>
           
           {bmi && (
             <div className="results">
-              BMI: <strong>{bmi}</strong> - {getWeightStatus(bmi)[0]} {getWeightStatus(bmi)[1]}
+              BMI: <strong style={{ color: bmiStatus[2] }}>{bmi}</strong> - {bmiStatus[0]} {bmiStatus[1]}
             </div>
           )}
         </div>
@@ -86,7 +88,6 @@ const BMICalculator = () => {
           </tbody>
         </table>
       </div>
-    
     </div>
   );
 };

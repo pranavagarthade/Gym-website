@@ -15,9 +15,9 @@ function App() {
           <Hero/>
           <Programs/>
           <Patch/>
-          <Timetable/>
-          <Reasons/>
           <Testimonials/>
+          <Reasons/>
+          <Timetable/>
           <Bmi/>
           <Join/>         
           <Footer/>

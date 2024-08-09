@@ -7,11 +7,11 @@ const Trataka = () => {
     <div>
       <section className="services-banner">
         <h2>Discover Our Services</h2>
-        <p>"Our Offered Programs"</p>
+        <p>"Focus the gaze, deepen concentration"</p>
       </section>
 
       <section className="benefits">
-        <h2>Our Benefits</h2>
+        <h2>What You Achieve</h2>
         <div className="benefits-content">
           <div className="benefits-text">
             <p>

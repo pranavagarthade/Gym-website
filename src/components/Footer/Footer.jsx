@@ -1,7 +1,11 @@
-import React from 'react';
-import './Footer.css';
-import { FaFacebookF, FaTwitter, FaFlickr, FaLinkedinIn } from 'react-icons/fa';
-import Logo from '../../assets/logo.png';
+
+
+import React from "react";
+import "./Footer.css";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaEnvelope, FaPhone } from 'react-icons/fa';
+import Logo from "../../assets/flogo.png";
+import { Link as ScrollLink } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,25 +13,70 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-logo">
           <img src={Logo} alt="GIMOX" />
-          <p>There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form by injected.</p>
+          <p>
+          "Yoga is the practice of tolerating the consequences of being yourself." – The Bhagavad Gita
+          </p>
         </div>
         <div className="footer-links">
           <div className="footer-section">
             <h3>INFORMATION</h3>
             <ul>
-              <li><a href="/about">ABOUT US</a></li>
-              <li><a href="/clients">CLIENTS</a></li>
-              <li><a href="/privacy">PRIVACY POLICY</a></li>
-              <li><a href="/customer">CUSTOMER</a></li>
+              <li>
+                <ScrollLink to="home" smooth={true} duration={500}>
+                  HOME
+                </ScrollLink>
+              </li>
+              <li>
+                {" "}
+                <RouterLink to="/Aboutus">ABOUT US</RouterLink>
+              </li>
+              <li>
+                <ScrollLink to="programs" smooth={true} duration={500}>
+                  PROGRAMS
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink to="reasons" smooth={true} duration={500}>
+                  REASONS
+                </ScrollLink>
+              </li>
+              <li>
+                <ScrollLink to="testimonials" smooth={true} duration={500}>
+                  TESTIMONIALS
+                </ScrollLink>
+              </li>
             </ul>
           </div>
           <div className="footer-section">
             <h3>OUR SERVICES</h3>
             <ul>
-              <li><a href="/services/psycho-training">PSYCHO TRAINING</a></li>
-              <li><a href="/services/self-defense">SELF DEFENSE</a></li>
-              <li><a href="/services/fitness-for-man">FITNESS FOR MAN</a></li>
-              <li><a href="/services/strength-training">STRENGTH TRAINING</a></li>
+              <li>
+                <RouterLink to="/WeightLifting">WEIGHT LIEFTING</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/Cardio">CARDIO TRAINING</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/FatBurning">FAT BURNING</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/Meditation">MEDITATION</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/Yoga">YOGA</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/Trataka">TRATAKA</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/Pranayam">PRANAYAM</RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/Laghu">LAGHU SHANKHA PRAKSHALANA </RouterLink>
+              </li>
+              <li>
+                <RouterLink to="/HealthFitnes">HEALTH FITNESS</RouterLink>
+              </li>
             </ul>
           </div>
         </div>
@@ -37,15 +86,27 @@ const Footer = () => {
           Copyright © {new Date().getFullYear()} All Rights Reserved.
         </div>
         <div className="contact-info">
-          <span>(+01) 123 456 7890</span>
-          <span>info@example.com</span>
-          <span>51 Somestreet Cambridge, CB4 3AA, United Kingdom</span>
+          <span>
+            <FaPhone /> (+91) 889476506
+          </span>
+          <span>
+            <FaEnvelope /> geetanjalifitness9@gmail.com
+          </span>
+          <span>Mumbai, Maharashtra</span>
         </div>
         <div className="social-links">
-          <a href="https://facebook.com" aria-label="Facebook"><FaFacebookF /></a>
-          <a href="https://twitter.com" aria-label="Twitter"><FaTwitter /></a>
-          <a href="https://flickr.com" aria-label="Flickr"><FaFlickr /></a>
-          <a href="https://linkedin.com" aria-label="LinkedIn"><FaLinkedinIn /></a>
+          <a href="https://www.facebook.com/geeta.agarthade.92"  target="blank" aria-label="Facebook">
+            <FaFacebookF />
+          </a>{" "}
+          <a href="https://www.instagram.com/geetanjali_yoga__fitness_zone?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="  target="blank" aria-label="Instagram">
+            <FaInstagram />
+          </a>
+          <a href="https://www.youtube.com/@geetasyogaandfitnesszone5857"  target="blank" aria-label="Youtube">
+            <FaYoutube />
+          </a>
+          <a href="https://www.linkedin.com/in/geetanjali-agarthade-1b3a40231" target="blank" aria-label="LinkedIn">
+            <FaLinkedinIn />
+          </a>
         </div>
       </div>
     </footer>

@@ -7,11 +7,11 @@ const Pranayam = () => {
     <div>
       <section className="services-banner">
         <h2>Our Pranayama Programs</h2>
-        <p>"Explore the world of breath and well-being with us."</p>
+        <p>"Control breath, balance mind and body"</p>
       </section>
 
       <section className="benefits">
-        <h2>Our Benefits</h2>
+        <h2>What You Achieve</h2>
         <div className="benefits-content">
           <div className="benefits-text">
             <p>

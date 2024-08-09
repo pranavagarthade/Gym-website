@@ -9,34 +9,34 @@ const Timetable = () => {
 
   const schedules = {
     Monday: [
-      { time: '9:00 AM - 10:00 AM', activity: 'Cycling', instructor: 'Karolina' },
-      { time: '9:00 AM - 10:00 AM', activity: 'Running', instructor: 'Karolina' },
-      { time: '9:00 AM - 10:00 AM', activity: 'Body Building', instructor: 'Josh Jameson' },
-      { time: '9:00 AM - 10:00 AM', activity: 'Cardio', instructor: 'Karolina' },
+      { time: '6:00 AM - 7:00 AM  - Morning' , activity: 'Chest Workout and Face Yoga', instructor: 'Geetanjali' },
+      { time: '8:00 AM - 9:00 AM  - Morning', activity: 'Chest Workout and Face Yoga', instructor: 'Geetanjali' },
+      { time: '10:30 AM - 11:30 AM - Morning', activity: 'Chest Workout and Face Yoga ', instructor: 'Geetanjali' },
+      { time: '5:00 PM - 6:00 PM  - Morning', activity: 'Chest Workout and Face Yoga', instructor: 'Geetanjali' },
     ],
     Tuesday: [
-        { time: '9:00 AM - 10:00 AM', activity: 'Cycling', instructor: 'Karolina' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Running', instructor: 'Karolina' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Body Building', instructor: 'Josh Jameson' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Cardio', instructor: 'Karolina' },
+        { time: '6:00 AM - 7:00 AM  - Morning', activity: 'Core Workout and Face yoga', instructor: 'Geetanjali' },
+        { time: '8:00 AM - 9:00 AM  - Morning', activity: 'Core Workout and Face yoga', instructor: 'Geetanjali' },
+        { time: '10:30 AM - 11:30 AM - Morning', activity: 'Core Workout and Face yoga', instructor: ' Geetanjali' },
+        { time: '5:00 PM - 6:00 PM  - Evening', activity: 'Core Workout and Face yoga', instructor: 'Geetanjali' },
       ],
       Wednesday: [
-        { time: '9:00 AM - 10:00 AM', activity: 'Cycling', instructor: 'Karolina' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Running', instructor: 'Karolina' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Body Building', instructor: 'Josh Jameson' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Cardio', instructor: 'Karolina' },
+        { time: '6:00 AM - 7:00 AM  - Morning', activity: 'Back Workout and Face Yoga', instructor: 'Geetanjali' },
+        { time: '8:00 AM - 9:00 AM  - Morning', activity: 'Back Workout and Face Yoga', instructor: 'Geetanjali' },
+        { time: '10:30 AM - 11:30 AM - Morning', activity: 'Back Workout and Face Yoga', instructor: ' Geetanjali' },
+        { time: '5:00 PM - 6:00 PM  - Evening', activity: 'Back Workout and Face Yoga', instructor: 'Geetanjali' },
       ],
       Thursday: [
-        { time: '9:00 AM - 10:00 AM', activity: 'Cycling', instructor: 'Karolina' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Running', instructor: 'Karolina' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Body Building', instructor: 'Josh Jameson' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Cardio', instructor: 'Karolina' },
+        { time: '6:00 AM - 7:00 AM  - Morning', activity: 'Yogasana and Pranayam', instructor: 'Geetanjali' },
+        { time: '8:00 AM - 9:00 AM  - Morning', activity: 'Yogasana and Pranayam', instructor: 'Geetanjali' },
+        { time: '10:30 AM - 11:30 AM - Morning', activity: ' Yogasana and Pranayam', instructor: ' Geetanjali' },
+        { time: '5:00 PM - 6:00 PM  - Evening', activity: 'Yogasana and Pranayam', instructor: 'Geetanjali' },
       ],
       Friday: [
-        { time: '9:00 AM - 10:00 AM', activity: 'Cycling', instructor: 'Karolina' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Running', instructor: 'Karolina' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Body Building', instructor: 'Josh Jameson' },
-        { time: '9:00 AM - 10:00 AM', activity: 'Cardio', instructor: 'Karolina' },
+        { time: '6:00 AM - 7:00 AM  - Morning', activity: 'Legs Workout and Cyclic Meditaion', instructor: 'Geetanjali' },
+        { time: '8:00 AM - 9:00 AM  - Morning', activity: 'Legs Workout and Cyclic Meditaion', instructor: 'Geetanjali' },
+        { time: '10:30 AM - 11:30 AM - Morning', activity: 'Legs Workout and Cyclic Meditaion', instructor: ' Geetanjali' },
+        { time: ':00 PM - 6:00 PM  - Evening', activity: 'Legs Workout and Cyclic Meditaion', instructor: 'Geetanjali' },
       ],
     
   };
@@ -53,7 +53,7 @@ const Timetable = () => {
 
   return (
     <div className="timetable">
-      <h1 className="title">OUR <span>TIMETABLE</span></h1>
+      <h1 className='titlee'><span className='stroke-text'>ONLINE</span></h1><h1 className='title'> <span> CLASSES TIMETABLE</span></h1>
       <nav className="day-nav">
         {days.map(day => (
           <button

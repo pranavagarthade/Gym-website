@@ -1,8 +1,7 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import './Form.css'
+import './Form.css';
 import fit_logo from '../../assets/fit_logo.png';
-
 
 function App() {
   const form = useRef();
@@ -15,21 +14,12 @@ function App() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    const formData = {
-      name,
-      phone,
-      classType,
-      batch,
-      comment,
-    };
-
     emailjs
       .sendForm(
         'service_b4cejkr',
         'template_bysz2ga',
         form.current,
-        '0vG8QSdt1ZGMyG2RC',
-        formData,
+        '0vG8QSdt1ZGMyG2RC'
       )
       .then(
         () => {
@@ -38,24 +28,27 @@ function App() {
         },
         (error) => {
           console.log('FAILED...', error.text);
-        },
+        }
       );
   };
 
   return (
     <section className="container">
-      <div className="image-container">
-        <img src={fit_logo} alt="Health and Fitness" />
-      </div>
-      <div className="form-header">
-        <h1>Registration Form</h1>
-        <hr />
+      <div className="header-container">
+        <div className="form-header">
+          <h1>Registration Form</h1>
+          <hr />
+        </div>
+        <div className="image-container">
+          <img src={fit_logo} alt="Health and Fitness" />
+        </div>
       </div>
       <form ref={form} onSubmit={sendEmail} className="form-container">
         <div className="form-group-row">
           <div className="form-group">
-            <label>Full Name *</label>
+            <label htmlFor="name">Full Name *</label>
             <input
+              id="name"
               name="name"
               type="text"
               placeholder="Enter your full name"
@@ -65,8 +58,9 @@ function App() {
             />
           </div>
           <div className="form-group">
-            <label>Phone No *</label>
+            <label htmlFor="phone">Phone No *</label>
             <input
+              id="phone"
               name="recipient"
               type="tel"
               placeholder="Enter your phone number"
@@ -78,21 +72,24 @@ function App() {
         </div>
         <div className="form-group-row">
           <div className="form-group">
-            <label>Choose your class </label>
+            <label htmlFor="class">Choose your class</label>
             <select
+              id="class"
               name="class"
               value={classType}
               onChange={(e) => setClassType(e.target.value)}
             >
               <option value="">Select a class</option>
               <option value="Yoga">Yoga</option>
-              <option value="Pilates">Fat Loss</option>
-              <option value="Zumba">Weight Gain</option>
+              <option value="Weight Loss">Weight Loss</option>
+              <option value="Weight Gain">Weight Gain</option>
+              <option value="Muscle building & Toning">Muscle building & Toning</option>
             </select>
           </div>
           <div className="form-group">
-            <label>Choose your batch </label>
+            <label htmlFor="batch">Choose your batch</label>
             <select
+              id="batch"
               name="batch"
               value={batch}
               onChange={(e) => setBatch(e.target.value)}
@@ -107,8 +104,9 @@ function App() {
         </div>
         <div className="form-group-row">
           <div className="form-group comment-group">
-            <label>Your Thoughts/Problem: </label>
+            <label htmlFor="comment">Your Thoughts/Problem:</label>
             <textarea
+              id="comment"
               name="comment"
               placeholder="Enter your Thoughts/Problem"
               value={comment}

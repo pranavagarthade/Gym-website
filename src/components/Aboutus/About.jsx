@@ -5,6 +5,7 @@ import './about.css';
 import cerificate1 from "../../assets/cerificate1.png"
 import cer2 from "../../assets/cer2.png";
 import abt11 from "../../assets/abt11.png";
+import log from "../../assets/aimgg.png"
 
 
 function AboutUs() {
@@ -19,25 +20,47 @@ function AboutUs() {
       </div>
       <div className="about-us-content">
         <p>
-          Welcome to Geetanjali's Yoga and Fitness Zone, where we have been dedicated to promoting health and well-being for over a decade. Our classes are conducted online, making it convenient for you to join from the comfort of your home. We offer a comprehensive range of services, including free diet plans, meditation sessions, and much more. Join us to embark on a journey towards a healthier and more balanced life.
-        </p>
+        At G Fit, I, Geetanjali, am dedicated to guiding you on your fitness journey. 
+        As a certified K11 Trainer and a specialist in nutrition with over 12 years of experience in the industry,
+         I bring a wealth of knowledge to help you achieve your fitness goals. 
+         My mission is to enhance your lifestyle by offering personalized training programs and expert nutritional advice.
+          Whether you aim to improve your overall health, increase your strength, or reach specific fitness milestones,
+           I am here to support and motivate you every step of the way. Together, we’ll work towards a healthier, 
+           more balanced, and fulfilling life.        </p>
         <div className="about-us-images">
           <img src={cerificate1} alt="Vyas certificate" />
           <img src={cer2} alt="Nutrients" />
         </div>
         <p>
-          At Geetanjali's Yoga and Fitness Zone, we believe in a holistic approach to fitness. Our experienced instructors guide you through each session with personalized attention, ensuring that you achieve your health goals effectively. Join our community today and experience the transformation.
-        </p>
+        At Geetanjali Yoga and Fitness Club, we offer a range of online classes to fit your schedule and fitness needs. 
+        Our daily batches include a variety of workouts targeting different muscle groups, ensuring a comprehensive approach to your fitness.
+         In addition to our dynamic workout sessions, we provide enriching yoga and meditation classes to foster mental clarity and physical well-being.
+          On Saturdays,
+          we hold personal counseling sessions where you can delve into your goals and reshape your mindset for a more focused and positive approach to your fitness journey. 
+        Join us online and experience a holistic approach to health and wellness from the comfort of your home.        </p>
       </div>
+
+      <div className="card-container">
+    <div className="card-left">
+      <img src={log} alt="Image" className="card-image" />
+    </div>
+    <div className="card-right">
+      <p className="card-info">
+      At Geetanjali Yoga and Fitness Zone, we offer a comprehensive fitness program that includes yoga, muscle building, and muscle toning exercises on a daily basis. Our muscle building program focuses on compound movements and progressive overload to help you build strength and muscle mass, utilizing a variety of equipment such as free weights, resistance bands, and machines to target all major muscle groups. Meanwhile, our muscle toning program incorporates high-repetition exercises and bodyweight movements to help you burn fat and create long, lean muscles. Whether you're looking to build strength, increase flexibility, or simply feel more energized and focused, our expert trainers will guide you through a workout that's tailored to your specific needs and goals, helping you achieve a stronger, healthier you.      </p>
+    </div>
+</div>
 
       <div className="yoga-enhance-section">
         <div className="yoga-enhance-info">
-          <h2>YOGA ENHANCES YOUR LIFE.</h2>
+          <h2>DAILY WORKOUT & YOGA ENHANCES YOUR LIFE.</h2>
           <div className="line"></div>
           <p>
-            Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venen faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed donec consequat, leo eget bibendum soda, augue velit cursus nunc donec qum felis ultricies nec, pellente
-          </p>
+          Boost your physical health with daily workouts at Geetanjali Yoga and Fitness Zone. Improve your mental well-being through regular yoga practice. Reduce stress and anxiety with a daily yoga routine. Increase strength, flexibility, and balance with expert instruction.
+           Experience a greater sense of well-being and happiness through regular exercise and yoga at Geetanjali Yoga and Fitness Club.          </p>
         </div>
+
+
+
         <div className="yoga-enhance-bars">
           <div className="bar">
             <div className="bar-label">Breathing</div>

@@ -2,7 +2,7 @@ import React from 'react'
 import './Hero.css'
 import Header from '../Header/Header'
 // import hero_image from "../../assets/hero_image.png";
-import hero_image_back from "../../assets/hero_image_back.png";
+import hero_image_back from "../../assets/chakra.png";
 import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
 import {motion} from 'framer-motion';
@@ -24,32 +24,32 @@ const Hero = () => {
               whileInView={{left: '8px'}}
               transition={{...transition, type: 'tween'}}
               ></motion.div>
-              <span>the best fitness club in the Dombivali</span> 
+              <span>G Fit Makes you the Best version of yourself</span> 
             </div>
             {/* Hero Heading */}
             <div className='hero-text'>
               <div>
                 <span className='stroke-text'>Shape</span>
-                <span> Your</span>
+                <span> Your mind</span>
               </div>
               <div>
-                <span>Ideal Body</span>
+                <span>And Body</span>
               </div>
               <div>
-                <span>In Here We Will Help You to Shape and Build Your Ideal Body and Live Up Your Life to Fullest</span>
+                <span>In Here We Will Help You to change you Entire Lifestyle.Shape and Build Your Ideal Body and Live Up Your Life to Fullest</span>
               </div>
             </div>
             {/* Figure */}
             <div className='figures'>
               <div>
                 <span>
-                  <NumberCounter end={140} start={100} delay='4' preFix="+"/>
+                  <NumberCounter end={100} start={10} delay='4' preFix="+"/>
                 </span>
-                <span>expert coachs</span>
+                <span>Happy Members</span>
               </div>
               <div>
                 <span>
-                <NumberCounter end={978} start={800} delay='4' preFix="+"/>
+                <NumberCounter end={120} start={50} delay='4' preFix="+"/>
                 </span>
                 <span>members joined</span>
               </div>
@@ -63,10 +63,13 @@ const Hero = () => {
             {/* Hero Button */}
             <div className="hero-buttons">
               <button className="btn"><Link className='join-now' to='/Form'>Get Started</Link></button>
-              <button className="btn">Learn More</button>
+              <button className="btn"><Link className='join-now' to="/Aboutus">Learn More</Link></button>
             </div>
         </div>
-        <div className="right-h">
+
+      
+        <div className=" right-h">
+        <div className='blur hero-blur'></div>
           <button className='btn'><Link className='join-now' to='/Form'>Join Now</Link></button>
           <motion.div 
           initial={{right:"-1rem"}}
@@ -79,8 +82,8 @@ const Hero = () => {
           {/* Hero Image */}
           <img src={hero_image} alt='' className='hero-image' />
           <motion.img
-          initial={{right:"11rem"}}
-          whileInView={{right: "20rem"}}
+          initial={{right:"-2rem"}}
+          whileInView={{right: "4.9rem"}}
           transition={transition}
            src={hero_image_back} alt='' className='hero-image-back' />
           {/* Calories */}

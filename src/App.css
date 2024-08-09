@@ -1,12 +1,12 @@
 /* make variables */
 :root {
-  --lightgray: #b7b7b7;
-  --gray: #ff8585;
-  --orange: #ffa245cc;
-  --darkGrey: #000000;
+  --lightgray: #D9D9D9;
+  --gray: #9c9c9c;
+  --orange: #cc691d;  /* #f48915*/
+  --darkGrey: #464D53;
   --caloryCard: #656565;
-  --planCard: linear-gradient(210.41deg, #ff9500c5 1.14%, #ffe100 100.75%);
-  --appColor:  #80aa89;
+  --planCard: linear-gradient(210.41deg, #fa5042 1.14%, #ffa739 100.75%);
+  --appColor:  #292b2f;
 }
 
 .App {
@@ -45,7 +45,7 @@
 }
 
 .blur{
-  background: rgba(253, 120, 43, 0.69);
+  background: rgba(158, 242, 253, 0.69);
   position: absolute;
   border-radius: 50%;
   filter: blur(150px);

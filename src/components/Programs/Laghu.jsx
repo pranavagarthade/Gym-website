@@ -11,7 +11,7 @@ const Laghu = () => {
       </section>
 
       <section className="benefits">
-        <h2>Our Benefits</h2>
+        <h2>What You Achieve</h2>
         <div className="benefits-content">
           <div className="benefits-text">
             <p>

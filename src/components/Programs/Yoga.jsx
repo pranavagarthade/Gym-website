@@ -10,7 +10,7 @@ const HealthFitnes = () => {
     <div>
       <section className="services-banner">
         <h2>Discover Our Programs</h2>
-        <p>"The programs we Provide"</p>
+        <p>"Unite body, mind, and spirit"</p>
       </section>
 
       <div className="services-container">
@@ -32,7 +32,7 @@ const HealthFitnes = () => {
       </div>
 
       <section className="benefits">
-        <h2>Our Benefits</h2>
+        <h2>What You Achieve</h2>
         <div className="benefits-content">
           <div className="benefits-text">
             <p>

@@ -7,6 +7,7 @@ import Programs from './components/Programs/Programs';
 import Patch from './components/Patch/Patch';
 import { Reasons } from './components/Reasons/Reasons';
 import Testimonials from './components/Testimonials/Testimonials';
+import Timetable from './components/Timetable/Timetable';
 function App() {
   return (
     <div className="App">
@@ -14,8 +15,9 @@ function App() {
           <Hero/>
           <Programs/>
           <Patch/>
-          <Reasons/>
           <Testimonials/>
+          <Reasons/>
+          <Timetable/>
           <Bmi/>
           <Join/>         
           <Footer/>

@@ -33,13 +33,13 @@ const BMICalculator = () => {
         
         <div className="calculator">
           <div className="input-group">
-            <input
+            <input className='bg'
               type="number"
               placeholder="Height / cm"
               value={height}
               onChange={(e) => setHeight(e.target.value)}
             />
-            <input
+            <input className='bg'
               type="number"
               placeholder="Weight / kg"
               value={weight}

@@ -4,7 +4,7 @@ import './Header.css';
 import Bars from '../../assets/bars.png';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
-import fit_logo from '../../assets/fit_logo.png';
+import fit_logo from '../../assets/flogo.png';
 
 const Header = () => {
   const [mobile, setMobile] = useState(window.innerWidth <= 768);

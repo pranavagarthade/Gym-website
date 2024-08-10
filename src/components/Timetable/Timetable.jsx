@@ -36,7 +36,7 @@ const Timetable = () => {
         { time: '6:00 AM - 7:00 AM  - Morning', activity: 'Legs Workout and Cyclic Meditaion', instructor: 'Geetanjali' },
         { time: '8:00 AM - 9:00 AM  - Morning', activity: 'Legs Workout and Cyclic Meditaion', instructor: 'Geetanjali' },
         { time: '10:30 AM - 11:30 AM - Morning', activity: 'Legs Workout and Cyclic Meditaion', instructor: ' Geetanjali' },
-        { time: ':00 PM - 6:00 PM  - Evening', activity: 'Legs Workout and Cyclic Meditaion', instructor: 'Geetanjali' },
+        { time: '5:00 PM - 6:00 PM  - Evening', activity: 'Legs Workout and Cyclic Meditaion', instructor: 'Geetanjali' },
       ],
     
   };

@@ -7,11 +7,13 @@ import Heart from "../../assets/heart.png";
 import Calories from "../../assets/calories.png";
 import {motion} from 'framer-motion';
 import NumberCounter from 'number-counter';
-import hero_image from "../../assets/shiva-removebg.png";
+// import hero_image from "../../assets/shiva-removebg.png";
+import hero_image from "../../assets/mainimgg.png";
+
 import { Link } from 'react-router-dom';
 const Hero = () => {
   const transition = {type: 'string', duration:3};
-  const mobile = window.innerWidth<=768 ? true : false;
+  const mobile = window.innerWidth<=768 ? true : false; 
   return (
     <div className="hero" id='home'>
         <div className='blur hero-blur'></div>

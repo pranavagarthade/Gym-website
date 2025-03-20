@@ -1,10 +1,12 @@
 import React from 'react';
 import '../Programs/WeightLifting.css';  
-import medi1 from '../../assets/medi1.jpg';
-import med2 from '../../assets/med2.jpg';
-import med3 from '../../assets/med3.jpg';
+// import medi1 from '../../assets/medi1.jpg';
+// import med2 from '../../assets/med2.jpg';
+// import med3 from '../../assets/med3.jpg';
 import mde from '../../assets/mde.jpg';
-
+import rex1 from '../../assets/rex1.png'
+import rex2 from '../../assets/rex2.png'
+import rex3 from '../../assets/rex3.png'
 const Meditation = () => {
     return (
         <div>
@@ -15,17 +17,17 @@ const Meditation = () => {
 
             <div className="services-container">
                 <div className="service-item">
-                    <img src={medi1} alt="Relaxation" />
+                    <img src={rex1} alt="Relaxation" />
                     <h3>Relaxation</h3>
                     <p>"Meditation: Quiet mind, tranquil heart, inner peace discovered."</p>
                 </div>
                 <div className="service-item">
-                    <img src={med2} alt="Loving-Kindness Meditation" />
+                    <img src={rex2} alt="Loving-Kindness Meditation" />
                     <h3>Loving-Kindness Meditation</h3>
                     <p>"Loving-kindness meditation: Radiate love, compassion, fostering inner well-being."</p>
                 </div>
                 <div className="service-item">
-                    <img src={med3} alt="Vipassana Meditation" />
+                    <img src={rex3} alt="Vipassana Meditation" />
                     <h3>Vipassana Meditation</h3>
                     <p>"Vipassana Meditation: Insight unfolds, clarity arises, mindfulness deepens."</p>
                 </div>

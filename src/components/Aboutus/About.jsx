@@ -1,9 +1,10 @@
 import React from 'react';
 import './about.css';
-import cerificate1 from "../../assets/cerificate1.png"
+import cerificate1 from "../../assets/cerificate1.png";
 import cer2 from "../../assets/cer2.png";
 import abt11 from "../../assets/abt11.png";
-import log from "../../assets/aimgg.png"
+// import log from "../../assets/aimgg.png";
+import about from '../../assets/about.JPG';
 
 
 function AboutUs() {
@@ -40,7 +41,7 @@ function AboutUs() {
 
       <div className="card-container">
     <div className="card-left">
-      <img src={log} alt="banner" className="card-image" />
+      <img src={about} alt="banner" className="card-image" />
     </div>
     <div className="card-right">
       <p className="card-info">

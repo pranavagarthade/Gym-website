@@ -7,6 +7,7 @@ import Programs from './components/Programs/Programs';
 import Patch from './components/Patch/Patch';
 import { Reasons } from './components/Reasons/Reasons';
 import Testimonials from './components/Testimonials/Testimonials';
+// import Plans from './components/Plans/Plans';
 import Timetable from './components/Timetable/Timetable';
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Programs/>
           <Patch/>
           <Testimonials/>
+          {/* <Plans/> */}
           <Reasons/>
           <Timetable/>
           <Bmi/>

@@ -1,10 +1,13 @@
 import React from 'react';
-import '../Programs/WeightLifting.css';  
-import exeimg from '../../assets/exeimg.jpg';
-import lowerimg from '../../assets/lowerimg.jpg';
-import upperi from '../../assets/upperi.webp';
-import card from '../../assets/card.jpg';
-
+// import '../Programs/WeightLifting.css';  
+// import exeimg from '../../assets/exeimg.jpg';
+// import lowerimg from '../../assets/lowerimg.jpg';
+// import upperi from '../../assets/upperi.webp';
+// import card from '../../assets/card.jpg';
+import lowerbody from '../../assets/lowebody.png'
+import upperbody from '../../assets/upperbody.png'
+import cardiovascular from '../../assets/cardiovascular.png'
+import fatburn from '../../assets/fatburn.png'
 const FatBurning = () => {
     return (
         <div>
@@ -15,17 +18,17 @@ const FatBurning = () => {
 
             <div className="services-container">
                 <div className="service-item">
-                    <img src={lowerimg} alt="Lower Body Toning" />
+                    <img src={lowerbody} alt="Lower Body Toning" />
                     <h3>Lower Body Toning</h3>
                     <p>"Lower body workouts enhance strength and sculpt muscles."</p>
                 </div>
                 <div className="service-item">
-                    <img src={upperi} alt="Upper Body Workouts" />
+                    <img src={upperbody} alt="Upper Body Workouts" />
                     <h3>Upper Body Workouts</h3>
                     <p>"Upper body exercises build strength and define muscles."</p>
                 </div>
                 <div className="service-item">
-                    <img src={card} alt="Cardiovascular Training" />
+                    <img src={cardiovascular} alt="Cardiovascular Training" />
                     <h3>Cardiovascular Training</h3>
                     <p>"Cardio workouts improve heart health and boost stamina."</p>
                 </div>
@@ -48,7 +51,7 @@ const FatBurning = () => {
                         </div>
                     </div>
                     <div className="benefits-img">
-                        <img src={exeimg} alt="Benefits" />
+                        <img src={fatburn} alt="Benefits" />
                     </div>
                 </div>
             </section>

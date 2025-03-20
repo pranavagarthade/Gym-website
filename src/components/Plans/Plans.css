@@ -1,4 +1,4 @@
-/* .plans-container{
+.plans-container{
     margin-top: -4rem;
     padding: 0 2rem;
     display: flex;
@@ -96,4 +96,4 @@
     .plans>:nth-child(2){
         transform: none;
     }
-} */
+}

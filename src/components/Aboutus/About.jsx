@@ -1,128 +1,269 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './about.css';
-import cerificate1 from "../../assets/cerificate1.png";
+import certificate1 from "../../assets/cerificate1.png";
 import cer2 from "../../assets/cer2.png";
 import abt11 from "../../assets/abt11.png";
-// import log from "../../assets/aimgg.png";
 import about from '../../assets/about.JPG';
 
-
 function AboutUs() {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  
+  // Handle scroll position for parallax effects
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  // Scroll reveal animation
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => observer.observe(el));
+    
+    return () => {
+      revealElements.forEach(el => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <div className="about-us-container" id='aboutus'>
-      <div
-        className="about-us-banner"
-        style={{ backgroundImage: `url(${abt11})` }}
-      >
-        <h1>About Us</h1>
-        <p className="coach-info">Know more about your coach</p>
-      </div>
-      <div className="about-us-content">
-        <p>
-        At G Fit, I, Geetanjali, am dedicated to guiding you on your fitness journey. 
-        As a certified K11 Trainer and a specialist in nutrition with over 12 years of experience in the industry,
-         I bring a wealth of knowledge to help you achieve your fitness goals. 
-         My mission is to enhance your lifestyle by offering personalized training programs and expert nutritional advice.
-          Whether you aim to improve your overall health, increase your strength, or reach specific fitness milestones,
-           I am here to support and motivate you every step of the way. Together, we’ll work towards a healthier, 
-           more balanced, and fulfilling life.        </p>
-        <div className="about-us-images">
-          <img src={cerificate1} alt="Vyas certificate" />
-          <img src={cer2} alt="Nutrients" />
+      {/* Modern Hero Banner with Parallax */}
+      <div className="about-us-banner">
+        <div 
+          className="banner-background" 
+          style={{ 
+            backgroundImage: `url(${abt11})`,
+            transform: `translateY(${scrollPosition * 0.3}px)`
+          }}
+        ></div>
+        <div className="banner-overlay"></div>
+        <div className="banner-content">
+          <h1 className="animated-heading">About Us</h1>
+          <div className="divider-container">
+            <div className="divider"></div>
+            <span className="divider-icon">✦</span>
+            <div className="divider"></div>
+          </div>
+          <p className="coach-info">Discover Your Path to Wellness</p>
+          <div className="banner-scroll-indicator">
+            <div className="scroll-arrow"></div>
+          </div>
         </div>
-        <p>
-        At Geetanjali Yoga and Fitness Club, we offer a range of online classes to fit your schedule and fitness needs. 
-        Our daily batches include a variety of workouts targeting different muscle groups, ensuring a comprehensive approach to your fitness.
-         In addition to our dynamic workout sessions, we provide enriching yoga and meditation classes to foster mental clarity and physical well-being.
-          On Saturdays,
-          we hold personal counseling sessions where you can delve into your goals and reshape your mindset for a more focused and positive approach to your fitness journey. 
-        Join us online and experience a holistic approach to health and wellness from the comfort of your home.        </p>
+      </div>
+      
+      {/* Introduction Section with Card Design */}
+    <div class="about-us-container">
+        <div class="about-us-intro">
+            <div class="about-us-content reveal fade-in">
+                <span class="section-label">Your Coach</span>
+                <h2 class="gradient-text">Meet Geetanjali</h2>
+                <div class="accent-line"></div>
+                <p>
+                    At G Fit, I, Geetanjali, am dedicated to guiding you on your fitness journey. 
+                    As a certified K11 Trainer and a specialist in nutrition with over <span class="highlight">12 years of experience</span> in the industry,
+                    I bring a wealth of knowledge to help you achieve your fitness goals. 
+                    My mission is to enhance your lifestyle by offering personalized training programs and expert nutritional advice.
+                    Whether you aim to improve your overall health, increase your strength, or reach specific fitness milestones,
+                    I am here to support and motivate you every step of the way. Together, we'll work towards a healthier, 
+                    more balanced, and fulfilling life.
+                </p>
+            </div>
+        </div>
+    </div>
+      
+      {/* Certifications Section with Hover Effects */}
+      <div className="certifications-section">
+        <div className="section-header reveal fade-up">
+          <span className="section-label">Expertise</span>
+          <h2 className="gradient-text">Professional Certifications</h2>
+          <div className="accent-line center"></div>
+        </div>
+        <div className="certification-container">
+          <div className="certification-card reveal fade-right">
+            <div className="card-inner">
+              <div className="card-front">
+                <img src={certificate1} alt="Vyas certificate" />
+              </div>
+              <div className="card-back">
+                <h3>Yoga Y.I.C</h3>
+                <p>Certified by the prestigious Vivekanand yoga for professional yoga training</p>
+              </div>
+            </div>
+          </div>
+          <div className="certification-card reveal fade-left">
+            <div className="card-inner">
+              <div className="card-front">
+                <img src={cer2} alt="Nutrients" />
+              </div>
+              <div className="card-back">
+                <h3>Nutrition Specialist</h3>
+                <p>Specialized in crafting personalized nutrition plans for optimal health</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Online Classes Section with Icons */}
+      <div className="online-classes-section reveal fade-up">
+        <span className="section-label">Training</span>
+        <h2 className="gradient-text">Online Classes</h2>
+        <div className="accent-line"></div>
+        <div className="classes-grid">
+          <div className="class-card reveal fade-up" style={{animationDelay: '0.1s'}}>
+            <div className="class-icon">
+              <span className="material-icon">fitness_center</span>
+            </div>
+            <h3>Daily Workouts</h3>
+            <p>Targeted exercises for different muscle groups to ensure comprehensive fitness</p>
+          </div>
+          <div className="class-card reveal fade-up" style={{animationDelay: '0.2s'}}>
+            <div className="class-icon">
+              <span className="material-icon">self_improvement</span>
+            </div>
+            <h3>Yoga Sessions</h3>
+            <p>Enriching yoga classes to foster mental clarity and physical well-being</p>
+          </div>
+                    <div className="class-card reveal fade-up" style={{animationDelay: '0.3s'}}>
+            <div className="class-icon">
+              <span className="material-icon">restaurant_menu</span>
+            </div>
+            <h3>Diet Plans Nutritionist</h3>
+            <p>Transform your body with personalized diet plans for a healthier, fitter you</p>
+          </div>
+          <div className="class-card reveal fade-up" style={{animationDelay: '0.3s'}}>
+            <div className="class-icon">
+              <span className="material-icon">psychology</span>
+            </div>
+            <h3>Saturday Counseling</h3>
+            <p>Personal guidance to help reshape your mindset for a focused fitness journey</p>
+          </div>
+        </div>
       </div>
 
-      <div className="card-container">
-    <div className="card-left">
-      <img src={about} alt="banner" className="card-image" />
-    </div>
-    <div className="card-right">
-      <p className="card-info">
-      At Geetanjali Yoga and Fitness Zone, we offer a comprehensive fitness program that includes yoga, muscle building, and muscle toning exercises on a daily basis. Our muscle building program focuses on compound movements and progressive overload to help you build strength and muscle mass, utilizing a variety of equipment such as free weights, resistance bands, and machines to target all major muscle groups. Meanwhile, our muscle toning program incorporates high-repetition exercises and bodyweight movements to help you burn fat and create long, lean muscles. Whether you're looking to build strength, increase flexibility, or simply feel more energized and focused, our expert trainers will guide you through a workout that's tailored to your specific needs and goals, helping you achieve a stronger, healthier you.      </p>
-    </div>
-</div>
+      {/* Approach Section with Parallax */}
+      <div className="parallax-container">
+        <div 
+          className="parallax-background"
+          style={{ 
+            backgroundImage: `url(${about})`,
+            transform: `translateY(${(scrollPosition - 1200) * 0.1}px)`
+          }}
+        ></div>
+        <div className="card-container">
+          <div className="approach-card reveal fade-left">
+            <span className="section-label">Philosophy</span>
+            <h2 className="gradient-text">Our Approach</h2>
+            <div className="accent-line"></div>
+            <p className="card-info">
+              At Geetanjali Yoga and Fitness Zone, we offer a comprehensive fitness program that includes yoga, muscle building, and muscle toning exercises on a daily basis. Our muscle building program focuses on compound movements and progressive overload to help you build strength and muscle mass, utilizing a variety of equipment such as free weights, resistance bands, and machines to target all major muscle groups. Meanwhile, our muscle toning program incorporates high-repetition exercises and bodyweight movements to help you burn fat and create long, lean muscles. Whether you're looking to build strength, increase flexibility, or simply feel more energized and focused, our expert trainers will guide you through a workout that's tailored to your specific needs and goals, helping you achieve a stronger, healthier you.
+            </p>
+          </div>
+        </div>
+      </div>
 
-      <div className="yoga-enhance-section">
+      {/* Benefits Section with Animated Progress */}
+      <div className="yoga-enhance-section reveal fade-up">
         <div className="yoga-enhance-info">
-          <h2>DAILY WORKOUT & YOGA ENHANCES YOUR LIFE.</h2>
-          <div className="line"></div>
+          <span className="section-label">Benefits</span>
+          <h2 className="gradient-text">DAILY WORKOUT & YOGA ENHANCES YOUR LIFE</h2>
+          <div className="accent-line"></div>
           <p>
-          Boost your physical health with daily workouts at Geetanjali Yoga and Fitness Zone. Improve your mental well-being through regular yoga practice. Reduce stress and anxiety with a daily yoga routine. Increase strength, flexibility, and balance with expert instruction.
-           Experience a greater sense of well-being and happiness through regular exercise and yoga at Geetanjali Yoga and Fitness Club.          </p>
+            Boost your physical health with daily workouts at Geetanjali Yoga and Fitness Zone. Improve your mental well-being through regular yoga practice. Reduce stress and anxiety with a daily yoga routine. Increase strength, flexibility, and balance with expert instruction.
+            Experience a greater sense of well-being and happiness through regular exercise and yoga at Geetanjali Yoga and Fitness Club.
+          </p>
         </div>
-
-
 
         <div className="yoga-enhance-bars">
-          <div className="bar">
-            <div className="bar-label">Breathing</div>
-            <div className="bar-container">
-              <div className="bar-fill" style={{ width: '87%' }}></div>
+          <div className="bar-item reveal fade-right">
+            <div className="bar-header">
+              <div className="bar-label">Breathing</div>
+              <div className="bar-percentage">87%</div>
             </div>
-            <div className="bar-percentage">87%</div>
+            <div className="bar-container">
+              <div className="bar-fill breathing" style={{ width: '87%' }}></div>
+            </div>
           </div>
-          <div className="bar">
-            <div className="bar-label">Metabolism</div>
-            <div className="bar-container">
-              <div className="bar-fill" style={{ width: '95%' }}></div>
+          <div className="bar-item reveal fade-left">
+            <div className="bar-header">
+              <div className="bar-label">Metabolism</div>
+              <div className="bar-percentage">95%</div>
             </div>
-            <div className="bar-percentage">95%</div>
+            <div className="bar-container">
+              <div className="bar-fill metabolism" style={{ width: '95%' }}></div>
+            </div>
           </div>
-          <div className="bar">
-            <div className="bar-label">Flexibility</div>
-            <div className="bar-container">
-              <div className="bar-fill" style={{ width: '80%' }}></div>
+          <div className="bar-item reveal fade-right">
+            <div className="bar-header">
+              <div className="bar-label">Flexibility</div>
+              <div className="bar-percentage">80%</div>
             </div>
-            <div className="bar-percentage">80%</div>
+            <div className="bar-container">
+              <div className="bar-fill flexibility" style={{ width: '80%' }}></div>
+            </div>
           </div>
-          <div className="bar">
-            <div className="bar-label">Toned Muscles</div>
-            <div className="bar-container">
-              <div className="bar-fill" style={{ width: '62%' }}></div>
+          <div className="bar-item reveal fade-left">
+            <div className="bar-header">
+              <div className="bar-label">Toned Muscles</div>
+              <div className="bar-percentage">62%</div>
             </div>
-            <div className="bar-percentage">62%</div>
+            <div className="bar-container">
+              <div className="bar-fill toned" style={{ width: '62%' }}></div>
+            </div>
           </div>
         </div>
       </div>
 
+      {/* Video Section with Card Effect */}
+      {/* <!-- Add this after your existing video-info div --> */}
+<div className="social-section">
+  <h3 className="social-title">Connect With Us</h3>
+  <p className="social-subtitle">
+    Follow our journey and stay updated with the latest yoga tips and tutorials
+  </p>
+  
+  <div className="social-links">
+    <a href="https://instagram.com/yourhandle" target="_blank" rel="noopener noreferrer" className="social-link instagram" data-tooltip="Instagram">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+      </svg>
+    </a>
+    
+    <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="social-link facebook" data-tooltip="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+      </svg>
+    </a>
+    
+    <a href="https://youtube.com/yourchannel" target="_blank" rel="noopener noreferrer" className="social-link youtube" data-tooltip="YouTube">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+      </svg>
+    </a>
+    
+    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="social-link linkedin" data-tooltip="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+    </a>
+  </div>
+</div>
 
-      <div className="video-section">
-        <div className="video-container">
-          <iframe 
-            src="https://www.youtube.com/embed/gqoa2qWs5AE" 
-            title="Yoga Tutorial"
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowFullScreen>
-          </iframe>
-        </div>
-        <div className="video-info">
-          <h3>Discover the Power of Yoga</h3>
-          <p>
-            This introductory video guides you through the fundamental principles of yoga and its transformative effects on body and mind. Learn about:
-          </p>
-          <ul>
-            <li>Basic yoga poses for beginners</li>
-            <li>Proper breathing techniques</li>
-            <li>The mind-body connection in yoga practice</li>
-            <li>Benefits of regular yoga practice</li>
-          </ul>
-          <p>
-            Join us on this journey to enhance your physical strength, flexibility, and mental well-being. Start your yoga practice today and experience the difference it can make in your life.
-          </p>
-        </div>
-      </div>
+
     </div>
   );
 }
 
 export default AboutUs;
-
 

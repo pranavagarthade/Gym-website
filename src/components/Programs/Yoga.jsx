@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Programs/WeightLifting.css';
-import yog1 from '../../assets/yog1.webp';
+// import yog1 from '../../assets/yog1.webp';
+import yogi1 from '../../assets/yogi1.png'
 import yog2 from '../../assets/yog2.jpg';
 import yog3 from '../../assets/yog3.webp';
 import yogaimg from '../../assets/yogaimg.jpg';
@@ -15,7 +16,7 @@ const HealthFitnes = () => {
 
       <div className="services-container">
         <div className="service-item">
-          <img src={yog1} alt="Mindfulness Yoga" />
+          <img src={yogi1} alt="Mindfulness Yoga" />
           <h3>Mindfulness Yoga</h3>
           <p>"Mindfulness yoga: cultivates awareness, reduces stress, enhances well-being."</p>
         </div>

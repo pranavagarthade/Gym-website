@@ -98,13 +98,13 @@ const Footer = () => {
           <a href="https://www.facebook.com/geeta.agarthade.92"  target="blank" aria-label="Facebook">
             <FaFacebookF />
           </a>{" "}
-          <a href="https://www.instagram.com/geetanjali_yoga__fitness_zone?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="  target="blank" aria-label="Instagram">
+          <a href="https://www.instagram.com/fitness.with.geetanjali/"  target="blank" aria-label="Instagram">
             <FaInstagram />
           </a>
-          <a href="https://www.youtube.com/@geetasyogaandfitnesszone5857"  target="blank" aria-label="Youtube">
+          <a href="https://www.youtube.com/@GeetanjaliYogaFitness"  target="blank" aria-label="Youtube">
             <FaYoutube />
           </a>
-          <a href="https://www.linkedin.com/in/geetanjali-agarthade-1b3a40231" target="blank" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/geetanjali-agarthade-1b3a40231/" target="blank" aria-label="LinkedIn">
             <FaLinkedinIn />
           </a>
         </div>

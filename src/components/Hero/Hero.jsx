@@ -10,6 +10,7 @@ import NumberCounter from 'number-counter';
 // import hero_image from "../../assets/shiva-removebg.png";
 import hero_image from "../../assets/mainimgg.png";
 
+
 import { Link } from 'react-router-dom';
 const Hero = () => {
   const transition = {type: 'string', duration:3};
@@ -104,5 +105,4 @@ const Hero = () => {
     </div>
   )
 }
-
 export default Hero

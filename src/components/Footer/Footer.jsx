@@ -87,10 +87,10 @@ const Footer = () => {
         </div>
         <div className="contact-info">
           <span>
-            <FaPhone /> (+91) 889476506
+            <FaPhone /> (+91) 8898476506
           </span>
           <span>
-            <FaEnvelope /> geetanjalifitness9@gmail.com
+            <FaEnvelope /> fitnessgeeta@gmail.com
           </span>
           <span>Mumbai, Maharashtra</span>
         </div>

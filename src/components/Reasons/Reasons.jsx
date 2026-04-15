@@ -21,14 +21,14 @@ export const Reasons = () => {
         <div className="right-r">
             <span>some reasons</span>
             <div>
-                <span className='stroke-text'>why</span>
-                <span> choose us?</span>
+                <span className='stroke-text'>NOT JUST FITNESS</span> 
+                <span> A LIFESTYLE UPGRAD</span>
             </div>
             <div className='details-r'>
 
                 <div>
                     <img src={tick} alt=""></img>
-                    <span>120+ TOTAL MEMBERS</span>
+                    <span>TRUSTED BY 500+ MEMBERS</span>
                 </div>
                 <div>
                     <img src={tick} alt="" />
@@ -36,7 +36,7 @@ export const Reasons = () => {
                 </div>
                 <div>
                     <img src={tick} alt="" />
-                    <span>50+ PROGRAM </span>
+                    <span>50+ PROGRAMS </span>
                 </div>
                 <div>
                     <img src={tick} alt="" />
@@ -48,11 +48,11 @@ export const Reasons = () => {
                 </div>
                 <div>
                     <img src={tick} alt="" />
-                    <span>Including Weekly Diet plans</span>
+                    <span>PERSONALIZED WEEKLY DIET PLANS</span>
                 </div>
                 <div>
                     <img src={tick} alt="" />
-                    <span>To change YOur Lifestyle</span>
+                    <span>DESIGNED TO TRANSFORM YOUR LIFESTYLE</span>
                 </div>
                
             </div>

@@ -1,46 +1,117 @@
+/* ───── Desktop Header ───── */
 .header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.logo{
-    width: 200px;
-    height: 100px;
-    /* padding-left: 20px; */
-    padding-bottom: 20px;
-   
+.logo {
+  width: 200px;
+  height: 100px;
+  padding-bottom: 20px;
 }
 
-.header-menu{
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    color: white;
+.header-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  color: white;
 }
 
-.header-menu>li:hover{
-    color: var(--orange);
+.header-menu > li:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.aboutus {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ───── Mobile Wrapper ───── */
+@media screen and (max-width: 768px) {
+
+  .mobile-menu-wrapper {
+    position: relative; /* dropdown anchors to this */
+    z-index: 99;
+  }
+
+  /* Hamburger button */
+  .hamburger-btn {
+    background-color: var(--appColor);
+    padding: 0.5rem;
+    border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+  }
+
+  .hamburger-btn.open {
+    background-color: var(--orange);
+  }
+
+  /* Compact dropdown list */
+  .mobile-dropdown {
+    list-style: none;
+    position: absolute;
+    top: calc(100% + 8px); /* sits just below the button */
+    right: 0;
+    background-color: var(--appColor);
+    border-radius: 8px;
+    padding: 0;
+    margin: 0;
+    min-width: 160px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+    /* Collapsed state */
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition:
+      max-height 0.3s ease,
+      opacity 0.25s ease,
+      transform 0.25s ease,
+      padding 0.25s ease;
+  }
+
+  /* Open state */
+  .mobile-dropdown.is-open {
+    max-height: 400px;      /* large enough to fit all items */
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+    padding: 0.5rem 0;
+  }
+
+  .mobile-dropdown > li {
+    padding: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .mobile-dropdown > li:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-dropdown > li a,
+  .mobile-dropdown > li span,
+  .mobile-dropdown > li .aboutus {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  .mobile-dropdown > li:hover a,
+  .mobile-dropdown > li:hover span,
+  .mobile-dropdown > li:hover .aboutus {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--orange);
+  }
 }
-
-.aboutus{
-    text-decoration: none; /* remove underline */
-    color: inherit; /* inherit text color from parent */
-}
-
-@media screen and (max-width: 768px) 
-{
-    .header > :nth-child(2){
-        position: fixed;
-        right: 2rem;
-        z-index: 99;
-    }
-
-    .header-menu{
-        flex-direction: column;
-        background-color: var(--appColor);
-        padding: 2rem;
-    }
-
-}
-

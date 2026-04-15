@@ -16,10 +16,10 @@ function App() {
           <Hero/>
           <Programs/>
           <Patch/>
+          <Timetable/>
           <Testimonials/>
           {/* <Plans/> */}
           <Reasons/>
-          <Timetable/>
           <Bmi/>
           <Join/>         
           <Footer/>
